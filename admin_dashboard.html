@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+        <style>
+            .centered-span {
+                text-align: center;
+                display: block;
+                
+            }
+
+            
+        </style>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+        
+
+    </head>
+
+
+
+    <title>RhythMix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/mdb@5.5.0/css/mdb.min.css" rel="stylesheet">
+    <style>
+        /* Add custom CSS styles here */
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand {
+            color: #fff;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .card {
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 15px; /* Rounded corners */
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .card-img-top {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Custom CSS for the Log Out button */
+        .modal-content .btn-primary {
+            background-color: #d72a2a33;
+            color: #0a0909; /* Text color for contrast */
+            border-color: rgba(0, 0, 0, 0.1); /* Border color, if needed */
+        }
+
+        /* Hover and focus styles (optional) */
+        .modal-content .btn-primary:hover,
+        .modal-content .btn-primary:focus {
+            background-color: rgba(0, 0, 0, 0.2); /* Adjust the opacity as needed */
+            color: #090909;
+            border-color: #d72a2a33;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/home">RhythMix</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="False" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+
+
+                <li class="nav-item active">
+                    <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                            Log Out
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Log Out</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Add your modal content here -->
+                                        Are you sure you want to log out?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <!-- Include the logout action here -->
+                                        <a href="/logout" class="btn btn-primary">Log Out</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+
+
+
+                <li class="nav-item active-1">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#creatorModal">
+                        Creator Mode
+                    </button>
+                
+                    <!-- Modal -->
+                    <div class="modal fade" id="creatorModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="creatorModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="creatorModalLabel">Confirm</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Add your modal content here -->
+                                    Do you want to turn on Creator's Mode?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <!-- Include the logout action here -->
+                                    <a href="/creator_signup" class="btn btn-primary">Yes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link disabled">
+                        <span class="badge badge-success">{{ user_name }} : {{ role }}</span>
+                    </a>
+                </li>
+
+               
+            
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<figure class="figure">
+    <img id="image" src="{{ url_for('static', filename='charts/artist_plot.png') }}"class="figure-img img-fluid rounded" alt="Bar Plot of All Songs">
+    <figcaption class="figure-caption">Bar Plot of Artists.</figcaption>
+</figure>
+
+<figure class="figure">
+    <img id="image" src="{{ url_for('static', filename='charts/genre_plot.png') }}"class="figure-img img-fluid rounded" alt="Bar Plot of All Songs">
+    <figcaption class="figure-caption">Bar Plot of Genre.</figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
