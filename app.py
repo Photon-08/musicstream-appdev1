@@ -32,5 +32,5 @@ app = create_app()
 #app.app_context().push()
 
 from applications.controllers import *
-app.run()
+#app.run()
 
